@@ -2,9 +2,17 @@
     <head>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.8.0/sha256.min.js"/></script>
     </head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="emoji.css">
 <body>
-    <input id="file_picker" type="file"/>
-    <a id="dl_link" download="sha256_list.csv" style="display: none"></a>
+  <div class="container">
+    <i class="em em-cat"></i>
+      <label for="file_picker" class="container--label">
+        <span>Upload your file</span>
+        <input id="file_picker" class="container--input" type="file" placeholder="Put your csv here"/>
+      </label>
+      <a id="dl_link" class="container--button" download="sha256_list.csv" style="display: none"></a>
+  </div>
 </body>
 <script>
 
