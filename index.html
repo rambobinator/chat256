@@ -27,7 +27,7 @@
           var contents = e.target.result.split("\n");
           contents = contents.filter(function(e){return e});
           for (var i=0; (i < contents.length); i++){
-            contents[i] = sha256(contents[i].replace(/\r/g, ""));
+            contents[i] = sha256(contents[i].replace(/\r/g, "").trim().toLowerCase());
           }
           var new_file = new Blob([contents.join('\n\r')], {type: "text/plain"});
           dl_link.href = window.URL.createObjectURL(new_file);
